@@ -14,13 +14,14 @@
 		6AB60A581897978300FAFA56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A571897978300FAFA56 /* main.m */; };
 		6AB60A5C1897978300FAFA56 /* HWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A5B1897978300FAFA56 /* HWAppDelegate.m */; };
 		6AB60A5F1897978300FAFA56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A5D1897978300FAFA56 /* Main.storyboard */; };
-		6AB60A621897978300FAFA56 /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A611897978300FAFA56 /* HWViewController.m */; };
 		6AB60A641897978300FAFA56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A631897978300FAFA56 /* Images.xcassets */; };
 		6AB60A6B1897978300FAFA56 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A6A1897978300FAFA56 /* XCTest.framework */; };
 		6AB60A6C1897978300FAFA56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4B1897978300FAFA56 /* Foundation.framework */; };
 		6AB60A6D1897978300FAFA56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4F1897978300FAFA56 /* UIKit.framework */; };
 		6AB60A751897978300FAFA56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A731897978300FAFA56 /* InfoPlist.strings */; };
 		6AB60A771897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A761897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m */; };
+		F68579FD1897B21700674DED /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68579FB1897B21700674DED /* HWViewController.m */; };
+		F68579FE1897B21700674DED /* HWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68579FC1897B21700674DED /* HWViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,15 @@
 		6AB60A5A1897978300FAFA56 /* HWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWAppDelegate.h; sourceTree = "<group>"; };
 		6AB60A5B1897978300FAFA56 /* HWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWAppDelegate.m; sourceTree = "<group>"; };
 		6AB60A5E1897978300FAFA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6AB60A601897978300FAFA56 /* HWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HWViewController.h; sourceTree = "<group>"; };
-		6AB60A611897978300FAFA56 /* HWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HWViewController.m; sourceTree = "<group>"; };
 		6AB60A631897978300FAFA56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6AB60A691897978300FAFA56 /* HomeWork2-BrowserOverflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HomeWork2-BrowserOverflowTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB60A6A1897978300FAFA56 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6AB60A721897978300FAFA56 /* HomeWork2-BrowserOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomeWork2-BrowserOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		6AB60A741897978300FAFA56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6AB60A761897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWork2_BrowserOverflowTests.m; sourceTree = "<group>"; };
+		F68579FA1897B21700674DED /* HWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewController.h; sourceTree = "<group>"; };
+		F68579FB1897B21700674DED /* HWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWViewController.m; sourceTree = "<group>"; };
+		F68579FC1897B21700674DED /* HWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +117,11 @@
 				6AB60A5A1897978300FAFA56 /* HWAppDelegate.h */,
 				6AB60A5B1897978300FAFA56 /* HWAppDelegate.m */,
 				6AB60A5D1897978300FAFA56 /* Main.storyboard */,
-				6AB60A601897978300FAFA56 /* HWViewController.h */,
-				6AB60A611897978300FAFA56 /* HWViewController.m */,
 				6AB60A631897978300FAFA56 /* Images.xcassets */,
 				6AB60A521897978300FAFA56 /* Supporting Files */,
+				F68579FA1897B21700674DED /* HWViewController.h */,
+				F68579FB1897B21700674DED /* HWViewController.m */,
+				F68579FC1897B21700674DED /* HWViewController.xib */,
 			);
 			path = "HomeWork2-BrowserOverflow";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				6AB60A641897978300FAFA56 /* Images.xcassets in Resources */,
 				6AB60A561897978300FAFA56 /* InfoPlist.strings in Resources */,
 				6AB60A5F1897978300FAFA56 /* Main.storyboard in Resources */,
+				F68579FE1897B21700674DED /* HWViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AB60A621897978300FAFA56 /* HWViewController.m in Sources */,
+				F68579FD1897B21700674DED /* HWViewController.m in Sources */,
 				6AB60A581897978300FAFA56 /* main.m in Sources */,
 				6AB60A5C1897978300FAFA56 /* HWAppDelegate.m in Sources */,
 			);
@@ -461,6 +465,7 @@
 				6AB60A7C1897978300FAFA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AB60A7D1897978300FAFA56 /* Build configuration list for PBXNativeTarget "HomeWork2-BrowserOverflowTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				6AB60A7F1897978300FAFA56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
