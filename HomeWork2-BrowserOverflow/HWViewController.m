@@ -9,7 +9,7 @@
 #import "HWViewController.h"
 
 
-@interface HWViewController ()
+@interface HWViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -34,6 +34,12 @@
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [connection scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     [connection start];
+    
+    _questionsTable.dataSource=self;
+    _questionsTable.delegate=self;
+    
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh:)];
+    self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -53,8 +59,13 @@
 {
 //	[connection release];
     
-	NSString *responseString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
-//    
+    
+//	NSString *responseString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
+    
+//    NSDictionary *responseDictionary = [NSPropertyListSerialization propertyListFromData:_responseData mutabilityOption:NSPropertyListImmutable format:nil errorDescription:nil];
+    
+    
+    //
 //	if ([responseString isEqualToString:@""Unable to find specified resource.""]) {
 //		NSLog(@"Unable to find specified resource.n");
 //	} else {
@@ -62,13 +73,83 @@
 //		self.someVariable = [dictionary valueForKey:@"somekey"];
 //	}
 
-    NSLog(@"%@ bb",responseString);
+    //NSLog(@"%@ bb",responseString);
+    
+    NSError *e;
+    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:&e];
+    
+    //NSLog(@"Object: %@", object);
+    
+  //  [_questionsData addObject:];
+    _total = [[object objectForKey:@"total"] intValue];
+    _page = [[object objectForKey:@"page"] intValue];
+    _pageSize = [[object objectForKey:@"pagesize"] intValue];
+    _questions = [object objectForKey:@"questions"];
+//    for(int i=0;i <[[object objectForKey:@"questions"] count];i++)
+//    {
+//        [_questions addObject:object[i]];
+//    }
+    
+   // NSLog(@"%i",);
+//
+    [_questionsTable reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _questions.count;
+    
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+    NSDictionary *temp = _questions[indexPath.row];
+//    cell.textLabel.text = [[temp valueForKeyPath:@"owner.user_id"] stringValue];
+    
+    NSString *tempScore = [[temp valueForKeyPath:@"view_count"] stringValue];
+    NSString *tempAnswerCount = [[temp valueForKeyPath:@"answer_count"] stringValue];
+    NSString *tempViewCount = [[temp valueForKeyPath:@"view_count"] stringValue];
+    
+//    nsa tempTags = [[temp valueForKeyPath:@"tags"] count];
+   // NSLog(@"%@",[temp valueForKeyPath:@"tags"]);
+    
+    NSString *tempSubtitle = [NSString stringWithFormat:@"vote:%@  answer:%@  views:%@",tempScore ,tempAnswerCount, tempViewCount];
+    
+    cell.textLabel.text = [temp valueForKeyPath:@"title"];
+    cell.detailTextLabel.text = tempSubtitle;
+    cell.detailTextLabel.numberOfLines = 2;
+    
+    return cell;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+-(void)refresh:(id)sender
+{
+    [_questionsTable reloadData];
 }
 
 @end
