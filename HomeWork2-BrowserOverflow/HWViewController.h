@@ -10,13 +10,15 @@
 
 @interface HWViewController : UIViewController
 
+@property (strong) NSURLConnection *connection;
+
 @property (weak, nonatomic) IBOutlet UITableView *questionsTable;
 @property (copy, nonatomic) NSMutableData *responseData;
 
 @property (nonatomic, assign) NSInteger total;
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, assign) NSInteger pageSize;
-@property (copy, nonatomic) NSMutableArray *questions;
+@property (strong, nonatomic) NSMutableArray *questions;
 
 @end
 

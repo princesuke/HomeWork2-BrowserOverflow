@@ -28,17 +28,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _responseData = [[NSMutableData data] init];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions"]];
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    [connection start];
-    
+    [self sendRequest:nil];
+
     _questionsTable.dataSource=self;
     _questionsTable.delegate=self;
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh:)];
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(sendRequest:)];
     self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
@@ -57,42 +53,21 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-//	[connection release];
-    
-    
-//	NSString *responseString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
-    
-//    NSDictionary *responseDictionary = [NSPropertyListSerialization propertyListFromData:_responseData mutabilityOption:NSPropertyListImmutable format:nil errorDescription:nil];
-    
-    
-    //
-//	if ([responseString isEqualToString:@""Unable to find specified resource.""]) {
-//		NSLog(@"Unable to find specified resource.n");
-//	} else {
-//		NSDictionary *dictionary = [responseString JSONValue];
-//		self.someVariable = [dictionary valueForKey:@"somekey"];
-//	}
 
-    //NSLog(@"%@ bb",responseString);
-    
     NSError *e;
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:&e];
-    
-    //NSLog(@"Object: %@", object);
-    
-  //  [_questionsData addObject:];
+
     _total = [[object objectForKey:@"total"] intValue];
     _page = [[object objectForKey:@"page"] intValue];
     _pageSize = [[object objectForKey:@"pagesize"] intValue];
     _questions = [object objectForKey:@"questions"];
-//    for(int i=0;i <[[object objectForKey:@"questions"] count];i++)
-//    {
-//        [_questions addObject:object[i]];
-//    }
-    
-   // NSLog(@"%i",);
-//
+
     [_questionsTable reloadData];
+    
+    _connection=nil;
+    _responseData=nil;
+    
+      self.navigationItem.rightBarButtonItem.enabled = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -147,9 +122,16 @@
     return 60;
 }
 
--(void)refresh:(id)sender
+-(void)sendRequest:(id)sender
 {
-    [_questionsTable reloadData];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions"]];
+    
+    _responseData = [[NSMutableData data] init];
+    _connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    
+    //[connection start];
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 @end
