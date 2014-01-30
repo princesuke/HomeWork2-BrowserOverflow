@@ -22,6 +22,10 @@
 		6AB60A771897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A761897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m */; };
 		F68579FD1897B21700674DED /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68579FB1897B21700674DED /* HWViewController.m */; };
 		F68579FE1897B21700674DED /* HWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68579FC1897B21700674DED /* HWViewController.xib */; };
+		F6857A01189A3CC400674DED /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A00189A3CC400674DED /* Question.m */; };
+		F6857A04189A402100674DED /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A03189A402100674DED /* Owner.m */; };
+		F6857A0B189A50C000674DED /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A09189A50C000674DED /* DetailViewController.m */; };
+		F6857A0C189A50C000674DED /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6857A0A189A50C000674DED /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,13 @@
 		F68579FA1897B21700674DED /* HWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewController.h; sourceTree = "<group>"; };
 		F68579FB1897B21700674DED /* HWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWViewController.m; sourceTree = "<group>"; };
 		F68579FC1897B21700674DED /* HWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWViewController.xib; sourceTree = "<group>"; };
+		F68579FF189A3CC400674DED /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		F6857A00189A3CC400674DED /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		F6857A02189A402100674DED /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		F6857A03189A402100674DED /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
+		F6857A08189A50C000674DED /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F6857A09189A50C000674DED /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F6857A0A189A50C000674DED /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +133,13 @@
 				F68579FA1897B21700674DED /* HWViewController.h */,
 				F68579FB1897B21700674DED /* HWViewController.m */,
 				F68579FC1897B21700674DED /* HWViewController.xib */,
+				F68579FF189A3CC400674DED /* Question.h */,
+				F6857A00189A3CC400674DED /* Question.m */,
+				F6857A02189A402100674DED /* Owner.h */,
+				F6857A03189A402100674DED /* Owner.m */,
+				F6857A08189A50C000674DED /* DetailViewController.h */,
+				F6857A09189A50C000674DED /* DetailViewController.m */,
+				F6857A0A189A50C000674DED /* DetailViewController.xib */,
 			);
 			path = "HomeWork2-BrowserOverflow";
 			sourceTree = "<group>";
@@ -234,6 +252,7 @@
 			files = (
 				6AB60A641897978300FAFA56 /* Images.xcassets in Resources */,
 				6AB60A561897978300FAFA56 /* InfoPlist.strings in Resources */,
+				F6857A0C189A50C000674DED /* DetailViewController.xib in Resources */,
 				6AB60A5F1897978300FAFA56 /* Main.storyboard in Resources */,
 				F68579FE1897B21700674DED /* HWViewController.xib in Resources */,
 			);
@@ -255,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F68579FD1897B21700674DED /* HWViewController.m in Sources */,
+				F6857A04189A402100674DED /* Owner.m in Sources */,
+				F6857A01189A3CC400674DED /* Question.m in Sources */,
 				6AB60A581897978300FAFA56 /* main.m in Sources */,
 				6AB60A5C1897978300FAFA56 /* HWAppDelegate.m in Sources */,
+				F6857A0B189A50C000674DED /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

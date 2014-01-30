@@ -7,7 +7,9 @@
 //
 
 #import "HWViewController.h"
-
+#import "DetailViewController.h"
+#import "Question.h"
+#import "Owner.h"
 
 @interface HWViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -48,6 +50,7 @@
 -(void)clearDataTabllView
 {
     [_questions removeAllObjects];
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -111,9 +114,10 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
+    
     NSDictionary *temp = _questions[indexPath.row];
 //    cell.textLabel.text = [[temp valueForKeyPath:@"owner.user_id"] stringValue];
-    
+
     NSString *tempScore = [[temp valueForKeyPath:@"view_count"] stringValue];
     NSString *tempAnswerCount = [[temp valueForKeyPath:@"answer_count"] stringValue];
     NSString *tempViewCount = [[temp valueForKeyPath:@"view_count"] stringValue];
@@ -148,6 +152,20 @@
     
     //[connection start];
     self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     NSDictionary *temp = _questions[indexPath.row];
+//    dataQuestion.title =  [temp valueForKeyPath:@"title"];
+//    [[_questions objectAtIndex:indexPath.row] setValue:@"value" forKey:@"title"];
+    
+    Question *dataQuestion = [[Question alloc] init];
+//    dataQuestion
+   
+    DetailViewController * detailVC = [[DetailViewController alloc] init];
+    detailVC.questionDetail = dataQuestion;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end
