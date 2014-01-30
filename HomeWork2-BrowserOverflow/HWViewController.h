@@ -11,6 +11,7 @@
 @interface HWViewController : UIViewController
 
 @property (strong) NSURLConnection *connection;
+@property (strong) UIRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UITableView *questionsTable;
 @property (copy, nonatomic) NSMutableData *responseData;

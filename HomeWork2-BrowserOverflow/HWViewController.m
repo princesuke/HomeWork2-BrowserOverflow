@@ -36,6 +36,18 @@
     
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(sendRequest:)];
     self.navigationItem.rightBarButtonItem = refreshButton;
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.tintColor = [UIColor greenColor];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    [refresh addTarget:self action:@selector(sendRequest:) forControlEvents:UIControlEventValueChanged];
+    _refreshControl = refresh;
+    [_questionsTable addSubview:refresh];
+}
+
+-(void)clearDataTabllView
+{
+    [_questions removeAllObjects];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -53,7 +65,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-
+    
     NSError *e;
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:_responseData options:NSJSONReadingMutableContainers error:&e];
 
@@ -67,7 +79,9 @@
     _connection=nil;
     _responseData=nil;
     
-      self.navigationItem.rightBarButtonItem.enabled = YES;
+    [_refreshControl endRefreshing];
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,11 +138,13 @@
 
 -(void)sendRequest:(id)sender
 {
+    [self clearDataTabllView];
+    [_questionsTable reloadData];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions"]];
     
     _responseData = [[NSMutableData data] init];
     _connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    
     
     //[connection start];
     self.navigationItem.rightBarButtonItem.enabled = NO;
