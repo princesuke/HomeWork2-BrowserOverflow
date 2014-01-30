@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Question.h"
+
+@class Question;
 
 @interface DetailViewController : UIViewController
 

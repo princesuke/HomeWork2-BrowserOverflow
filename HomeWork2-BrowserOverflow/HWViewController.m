@@ -160,9 +160,8 @@
 //    dataQuestion.title =  [temp valueForKeyPath:@"title"];
 //    [[_questions objectAtIndex:indexPath.row] setValue:@"value" forKey:@"title"];
     
-    Question *dataQuestion = [[Question alloc] init];
-//    dataQuestion
-   
+    Question *dataQuestion = [[Question alloc] initWithDictionary:temp];
+
     DetailViewController * detailVC = [[DetailViewController alloc] init];
     detailVC.questionDetail = dataQuestion;
     [self.navigationController pushViewController:detailVC animated:YES];

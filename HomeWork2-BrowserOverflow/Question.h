@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Owner.h"
+//@class Owner;
 
 @interface Question : NSObject
 
@@ -17,6 +19,8 @@
 
 @property (strong, nonatomic) NSMutableArray *tags;
 
--(void)initWithDictionary:(NSDictionary *)valueDetail;
+@property (strong, nonatomic) Owner * ownerDetail;
+
+-(Question *)initWithDictionary:(NSDictionary *)valueDetail;
 
 @end

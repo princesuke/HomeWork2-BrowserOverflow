@@ -7,13 +7,21 @@
 //
 
 #import "Question.h"
+#import "Owner.h"
 
 @implementation Question
 
--initWithDictionary:(NSDictionary *)valueDetail
+
+-(Question *)initWithDictionary:(NSDictionary *)valueDetail
 {
-    NSString *title = [valueDetail valueForKey:@"title"];
-    return self.title;
+    self = [super init];
+    if (self) {
+        NSString *title = [valueDetail valueForKey:@"title"];
+        self.title = title;
+        self.ownerDetail = [[Owner alloc] initWithDictionary:[valueDetail valueForKey:@"owner"]];
+    }
+    return self;
 }
+
 
 @end

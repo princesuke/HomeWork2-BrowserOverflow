@@ -17,4 +17,7 @@
 @property (strong,nonatomic) NSString *displayName;
 @property (strong,nonatomic) NSString *emailHash;
 
+
+-(Owner *)initWithDictionary:(NSDictionary *)valueDetail;
+
 @end

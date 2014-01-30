@@ -10,5 +10,14 @@
 
 @implementation Owner
 
+-(Owner *)initWithDictionary:(NSDictionary *)valueDetail
+{
+    self = [super init];
+    if (self)
+    {
+        self.displayName = [valueDetail valueForKey:@"display_name"];
+    }
+    return self;
+}
 
 @end

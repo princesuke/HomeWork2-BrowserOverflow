@@ -7,6 +7,9 @@
 //
 
 #import "DetailViewController.h"
+//#import "Owner.h"
+#import "Question.h"
+
 
 @interface DetailViewController ()
 
@@ -26,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@",_questionDetail.title);
+    NSLog(@"title = %@ \n owner = %@",_questionDetail.title,_questionDetail.ownerDetail.displayName);
     // Do any additional setup after loading the view from its nib.
 }
 
