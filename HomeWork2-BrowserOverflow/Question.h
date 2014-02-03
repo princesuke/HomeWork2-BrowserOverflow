@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "Owner.h"
-//@class Owner;
 
 @interface Question : NSObject
 

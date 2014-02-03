@@ -13,5 +13,8 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) Question *questionDetail;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ownerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
 
 @end

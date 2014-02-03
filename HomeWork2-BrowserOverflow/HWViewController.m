@@ -150,15 +150,12 @@
     _responseData = [[NSMutableData data] init];
     _connection = [NSURLConnection connectionWithRequest:request delegate:self];
     
-    //[connection start];
     self.navigationItem.rightBarButtonItem.enabled = NO;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
      NSDictionary *temp = _questions[indexPath.row];
-//    dataQuestion.title =  [temp valueForKeyPath:@"title"];
-//    [[_questions objectAtIndex:indexPath.row] setValue:@"value" forKey:@"title"];
     
     Question *dataQuestion = [[Question alloc] initWithDictionary:temp];
 

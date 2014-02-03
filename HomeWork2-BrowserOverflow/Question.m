@@ -16,9 +16,9 @@
 {
     self = [super init];
     if (self) {
-        NSString *title = [valueDetail valueForKey:@"title"];
-        self.title = title;
-        self.ownerDetail = [[Owner alloc] initWithDictionary:[valueDetail valueForKey:@"owner"]];
+        _title = [valueDetail valueForKey:@"title"];
+        _tags = [valueDetail valueForKey:@"tags"];
+        _ownerDetail = [[Owner alloc] initWithDictionary:[valueDetail valueForKey:@"owner"]];
     }
     return self;
 }
