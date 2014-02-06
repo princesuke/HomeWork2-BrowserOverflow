@@ -16,8 +16,12 @@
 {
     self = [super init];
     if (self) {
-        _title = [valueDetail valueForKey:@"title"];
         _tags = [valueDetail valueForKey:@"tags"];
+        _title = [valueDetail valueForKey:@"title"];
+        _body = [valueDetail valueForKey:@"body"];
+        
+        _questionId = [[valueDetail valueForKey:@"question_id"] integerValue];
+        _answerCount = [[valueDetail valueForKey:@"answer_count"] integerValue];
         _ownerDetail = [[Owner alloc] initWithDictionary:[valueDetail valueForKey:@"owner"]];
     }
     return self;

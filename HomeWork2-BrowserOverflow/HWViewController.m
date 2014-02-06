@@ -108,6 +108,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
@@ -143,12 +144,13 @@
 -(void)sendRequest:(id)sender
 {
     [self clearDataTabllView];
-    [_questionsTable reloadData];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions?body=true"]];
     
     _responseData = [[NSMutableData data] init];
     _connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    [_questionsTable reloadData];
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
 }

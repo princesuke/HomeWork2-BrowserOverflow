@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HWViewController">
             <connections>
                 <outlet property="questionsTable" destination="1Kw-LY-huR" id="HX0-h5-j4k"/>
+                <outlet property="searchBar" destination="h1Q-1d-oVw" id="9h1-oK-4HG"/>
+                <outlet property="searchDisplayController" destination="gwu-fF-OfL" id="1UG-9i-LVT"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -16,14 +18,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1Kw-LY-huR">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="612"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-1d-oVw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="9tD-9F-Ut3"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <searchDisplayController id="TVn-eb-gXB">
+            <connections>
+                <outlet property="delegate" destination="-1" id="nN2-Vn-pT4"/>
+                <outlet property="searchContentsController" destination="-1" id="ZX1-mk-ELU"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="AC8-TB-kVE"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="XPC-a0-5mb"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="gwu-fF-OfL">
+            <connections>
+                <outlet property="delegate" destination="-1" id="SMz-EE-Qj8"/>
+                <outlet property="searchBar" destination="h1Q-1d-oVw" id="3yB-Bx-7AC"/>
+                <outlet property="searchContentsController" destination="-1" id="XeR-7p-oQp"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="OVx-Gj-qaQ"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="Hru-G9-yC6"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>

@@ -21,5 +21,7 @@
 @property (nonatomic, assign) NSInteger pageSize;
 @property (strong, nonatomic) NSMutableArray *questions;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 

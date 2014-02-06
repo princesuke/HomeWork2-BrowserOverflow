@@ -12,9 +12,20 @@
 
 @interface DetailViewController : UIViewController
 
+
+@property (strong) NSURLConnection *detailConnection;
+@property (strong) UIRefreshControl *detailRefreshControl;
+
+@property (weak, nonatomic) IBOutlet UITableView *detailTable;
+@property (copy, nonatomic) NSMutableData *detailResponseData;
+
 @property (strong, nonatomic) Question *questionDetail;
+@property (strong, nonatomic) NSMutableArray *answer;
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ownerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tagsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *questionId;
 
 @end

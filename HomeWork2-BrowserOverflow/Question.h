@@ -12,6 +12,8 @@
 @interface Question : NSObject
 
 @property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *body;
+@property (nonatomic, assign) NSInteger questionId;
 @property (nonatomic, assign) NSInteger score;
 @property (nonatomic, assign) NSInteger answerCount;
 @property (nonatomic, assign) NSInteger viewCount;

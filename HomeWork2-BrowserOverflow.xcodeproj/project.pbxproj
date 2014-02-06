@@ -20,6 +20,21 @@
 		6AB60A6D1897978300FAFA56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4F1897978300FAFA56 /* UIKit.framework */; };
 		6AB60A751897978300FAFA56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A731897978300FAFA56 /* InfoPlist.strings */; };
 		6AB60A771897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A761897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m */; };
+		D33C58A018A341E300E1F05E /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = D33C589F18A341E300E1F05E /* Answer.m */; };
+		D392ED6318A0CBC400A616F0 /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68579FB1897B21700674DED /* HWViewController.m */; };
+		D392ED6418A0CBC400A616F0 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A03189A402100674DED /* Owner.m */; };
+		D392ED6518A0CBC400A616F0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A00189A3CC400674DED /* Question.m */; };
+		D392ED6618A0CBC400A616F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A571897978300FAFA56 /* main.m */; };
+		D392ED6718A0CBC400A616F0 /* HWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AB60A5B1897978300FAFA56 /* HWAppDelegate.m */; };
+		D392ED6818A0CBC400A616F0 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A09189A50C000674DED /* DetailViewController.m */; };
+		D392ED6A18A0CBC400A616F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4D1897978300FAFA56 /* CoreGraphics.framework */; };
+		D392ED6B18A0CBC400A616F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4F1897978300FAFA56 /* UIKit.framework */; };
+		D392ED6C18A0CBC400A616F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB60A4B1897978300FAFA56 /* Foundation.framework */; };
+		D392ED6E18A0CBC400A616F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A631897978300FAFA56 /* Images.xcassets */; };
+		D392ED6F18A0CBC400A616F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A541897978300FAFA56 /* InfoPlist.strings */; };
+		D392ED7018A0CBC400A616F0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6857A0A189A50C000674DED /* DetailViewController.xib */; };
+		D392ED7118A0CBC400A616F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB60A5D1897978300FAFA56 /* Main.storyboard */; };
+		D392ED7218A0CBC400A616F0 /* HWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68579FC1897B21700674DED /* HWViewController.xib */; };
 		F68579FD1897B21700674DED /* HWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F68579FB1897B21700674DED /* HWViewController.m */; };
 		F68579FE1897B21700674DED /* HWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68579FC1897B21700674DED /* HWViewController.xib */; };
 		F6857A01189A3CC400674DED /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = F6857A00189A3CC400674DED /* Question.m */; };
@@ -56,6 +71,10 @@
 		6AB60A721897978300FAFA56 /* HomeWork2-BrowserOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HomeWork2-BrowserOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		6AB60A741897978300FAFA56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6AB60A761897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeWork2_BrowserOverflowTests.m; sourceTree = "<group>"; };
+		D33C589E18A341E300E1F05E /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Answer.h; path = ../Answer.h; sourceTree = "<group>"; };
+		D33C589F18A341E300E1F05E /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Answer.m; path = ../Answer.m; sourceTree = "<group>"; };
+		D392ED7618A0CBC400A616F0 /* HomeWork2-BrowserOverflow copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork2-BrowserOverflow copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D392ED7718A0CBC400A616F0 /* HomeWork2-BrowserOverflow copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HomeWork2-BrowserOverflow copy-Info.plist"; path = "/Users/worawit.n/Documents/workspace/HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow copy-Info.plist"; sourceTree = "<absolute>"; };
 		F68579FA1897B21700674DED /* HWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWViewController.h; sourceTree = "<group>"; };
 		F68579FB1897B21700674DED /* HWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWViewController.m; sourceTree = "<group>"; };
 		F68579FC1897B21700674DED /* HWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HWViewController.xib; sourceTree = "<group>"; };
@@ -89,6 +108,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D392ED6918A0CBC400A616F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D392ED6A18A0CBC400A616F0 /* CoreGraphics.framework in Frameworks */,
+				D392ED6B18A0CBC400A616F0 /* UIKit.framework in Frameworks */,
+				D392ED6C18A0CBC400A616F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,6 +128,7 @@
 				6AB60A701897978300FAFA56 /* HomeWork2-BrowserOverflowTests */,
 				6AB60A4A1897978300FAFA56 /* Frameworks */,
 				6AB60A491897978300FAFA56 /* Products */,
+				D392ED7718A0CBC400A616F0 /* HomeWork2-BrowserOverflow copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +137,7 @@
 			children = (
 				6AB60A481897978300FAFA56 /* HomeWork2-BrowserOverflow.app */,
 				6AB60A691897978300FAFA56 /* HomeWork2-BrowserOverflowTests.xctest */,
+				D392ED7618A0CBC400A616F0 /* HomeWork2-BrowserOverflow copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,13 +164,15 @@
 				F68579FA1897B21700674DED /* HWViewController.h */,
 				F68579FB1897B21700674DED /* HWViewController.m */,
 				F68579FC1897B21700674DED /* HWViewController.xib */,
+				F6857A08189A50C000674DED /* DetailViewController.h */,
+				F6857A09189A50C000674DED /* DetailViewController.m */,
+				F6857A0A189A50C000674DED /* DetailViewController.xib */,
 				F68579FF189A3CC400674DED /* Question.h */,
 				F6857A00189A3CC400674DED /* Question.m */,
 				F6857A02189A402100674DED /* Owner.h */,
 				F6857A03189A402100674DED /* Owner.m */,
-				F6857A08189A50C000674DED /* DetailViewController.h */,
-				F6857A09189A50C000674DED /* DetailViewController.m */,
-				F6857A0A189A50C000674DED /* DetailViewController.xib */,
+				D33C589E18A341E300E1F05E /* Answer.h */,
+				D33C589F18A341E300E1F05E /* Answer.m */,
 			);
 			path = "HomeWork2-BrowserOverflow";
 			sourceTree = "<group>";
@@ -211,6 +244,23 @@
 			productReference = 6AB60A691897978300FAFA56 /* HomeWork2-BrowserOverflowTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D392ED6118A0CBC400A616F0 /* homeWorkAlpha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D392ED7318A0CBC400A616F0 /* Build configuration list for PBXNativeTarget "homeWorkAlpha" */;
+			buildPhases = (
+				D392ED6218A0CBC400A616F0 /* Sources */,
+				D392ED6918A0CBC400A616F0 /* Frameworks */,
+				D392ED6D18A0CBC400A616F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = homeWorkAlpha;
+			productName = "HomeWork2-BrowserOverflow";
+			productReference = D392ED7618A0CBC400A616F0 /* HomeWork2-BrowserOverflow copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,6 +271,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jirat K.";
 				TargetAttributes = {
+					6AB60A471897978300FAFA56 = {
+						DevelopmentTeam = 6MEF785D5M;
+					};
 					6AB60A681897978300FAFA56 = {
 						TestTargetID = 6AB60A471897978300FAFA56;
 					};
@@ -241,6 +294,7 @@
 			targets = (
 				6AB60A471897978300FAFA56 /* HomeWork2-BrowserOverflow */,
 				6AB60A681897978300FAFA56 /* HomeWork2-BrowserOverflowTests */,
+				D392ED6118A0CBC400A616F0 /* homeWorkAlpha */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +320,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D392ED6D18A0CBC400A616F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D392ED6E18A0CBC400A616F0 /* Images.xcassets in Resources */,
+				D392ED6F18A0CBC400A616F0 /* InfoPlist.strings in Resources */,
+				D392ED7018A0CBC400A616F0 /* DetailViewController.xib in Resources */,
+				D392ED7118A0CBC400A616F0 /* Main.storyboard in Resources */,
+				D392ED7218A0CBC400A616F0 /* HWViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -276,6 +342,7 @@
 				F68579FD1897B21700674DED /* HWViewController.m in Sources */,
 				F6857A04189A402100674DED /* Owner.m in Sources */,
 				F6857A01189A3CC400674DED /* Question.m in Sources */,
+				D33C58A018A341E300E1F05E /* Answer.m in Sources */,
 				6AB60A581897978300FAFA56 /* main.m in Sources */,
 				6AB60A5C1897978300FAFA56 /* HWAppDelegate.m in Sources */,
 				F6857A0B189A50C000674DED /* DetailViewController.m in Sources */,
@@ -287,6 +354,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB60A771897978300FAFA56 /* HomeWork2_BrowserOverflowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D392ED6218A0CBC400A616F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D392ED6318A0CBC400A616F0 /* HWViewController.m in Sources */,
+				D392ED6418A0CBC400A616F0 /* Owner.m in Sources */,
+				D392ED6518A0CBC400A616F0 /* Question.m in Sources */,
+				D392ED6618A0CBC400A616F0 /* main.m in Sources */,
+				D392ED6718A0CBC400A616F0 /* HWAppDelegate.m in Sources */,
+				D392ED6818A0CBC400A616F0 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,10 +485,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Prefix.pch";
 				INFOPLIST_FILE = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,10 +501,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Prefix.pch";
 				INFOPLIST_FILE = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -468,6 +554,38 @@
 			};
 			name = Release;
 		};
+		D392ED7418A0CBC400A616F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Prefix.pch";
+				INFOPLIST_FILE = "HomeWork2-BrowserOverflow copy-Info.plist";
+				PRODUCT_NAME = "HomeWork2-BrowserOverflow copy";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D392ED7518A0CBC400A616F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SANOOK SHOPPING LIMITED (6MEF785D5M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SANOOK SHOPPING LIMITED (6MEF785D5M)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HomeWork2-BrowserOverflow/HomeWork2-BrowserOverflow-Prefix.pch";
+				INFOPLIST_FILE = "HomeWork2-BrowserOverflow copy-Info.plist";
+				PRODUCT_NAME = "HomeWork2-BrowserOverflow copy";
+				PROVISIONING_PROFILE = "8E94ECE0-06A7-4E07-B18B-AAF5132EB970";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -494,6 +612,15 @@
 			buildConfigurations = (
 				6AB60A7E1897978300FAFA56 /* Debug */,
 				6AB60A7F1897978300FAFA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D392ED7318A0CBC400A616F0 /* Build configuration list for PBXNativeTarget "homeWorkAlpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D392ED7418A0CBC400A616F0 /* Debug */,
+				D392ED7518A0CBC400A616F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
