@@ -11,7 +11,7 @@
 #import "Question.h"
 #import "Owner.h"
 
-@interface HWViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface HWViewController ()<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 
 @end
 
@@ -31,6 +31,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    _searchBar.showsCancelButton = true;
+    self.searchDisplayController.displaysSearchBarInNavigationBar = true;
+    
     [self sendRequest:nil];
 
     _questionsTable.dataSource=self;
@@ -45,6 +48,8 @@
     [refresh addTarget:self action:@selector(sendRequest:) forControlEvents:UIControlEventValueChanged];
     _refreshControl = refresh;
     [_questionsTable addSubview:refresh];
+
+  
 }
 
 -(void)clearDataTabllView
@@ -145,6 +150,8 @@
 {
     [self clearDataTabllView];
     
+    //NSLog(@"%@",sender);
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.stackoverflow.com/1.1/questions?body=true"]];
     
     _responseData = [[NSMutableData data] init];
@@ -153,6 +160,23 @@
     [_questionsTable reloadData];
     
     self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+-(void)sendSearchRequest:(id)sender
+{
+    [self clearDataTabllView];
+    
+    NSString * requestStringUrl  = [NSString stringWithFormat:@"http://api.stackoverflow.com/1.1/search?intitle=%@",sender];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestStringUrl]];
+    
+    _responseData = [[NSMutableData data] init];
+    _connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    [_questionsTable reloadData];
+    
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -164,6 +188,45 @@
     DetailViewController * detailVC = [[DetailViewController alloc] init];
     detailVC.questionDetail = dataQuestion;
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+#pragma searchBar
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+//     [self handleSearch:searchBar];
+  //  NSLog(@"aaaa %@", searchBar.text);
+     //[self.view endEditing:YES];
+    [self sendSearchRequest:searchBar.text];
+    [_searchBar resignFirstResponder];
+
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+//      NSLog(@"bbb %@", searchBar.text);
+//    [self handleSearch:searchBar];
+}
+
+- (void)handleSearch:(UISearchBar *)searchBar {
+//    [self se:@"aaa"];
+    
+//    NSLog(@"User searched for %@", searchBar.text);
+//     [searchBar resignFirstResponder]; // if you want the keyboard to go away
+    
+//    [self sendSearchRequest:searchBar.text];
+//      [self.view endEditing:YES];
+}
+
+- (void)searchBarCancelButtondsdClicked:(UISearchBar *) searchBar {
+    NSLog(@"User canceled search");
+    [searchBar resignFirstResponder]; // if you want the keyboard to go away
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+
+//     [_searchBar resignFirstResponder];
+//    [self.view endEditing:YES];
+    [_searchBar resignFirstResponder];
 }
 
 @end
